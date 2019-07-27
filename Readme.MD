@@ -23,3 +23,11 @@ git fetch // 同步远程仓库
 git checkout -b dev origin/dev // 拉取指定分支
 git checkout -t origin/dev // 这个也可以
 ```
+
+* git修改远程分支
+```shell
+git remote -v
+git remote remove origin
+git remote add origin
+git push origin --all //修改仓库地址后，把所有分支一次性推送到远程
+```
