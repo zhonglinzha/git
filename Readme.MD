@@ -17,3 +17,9 @@ git config --system --unset credential.helper //这个不知道是不是有用
 git remote add origin git@github.com:zhonglinzha/git.git
 git push -u origin master
 ```
+* 用git命令拉取远端分支 其实使用客户端工具只是提高工作效率。
+```shell
+git fetch // 同步远程仓库
+git checkout -b dev origin/dev // 拉取指定分支
+git checkout -t origin/dev // 这个也可以
+```
