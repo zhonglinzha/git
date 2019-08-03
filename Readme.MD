@@ -31,3 +31,11 @@ git remote remove origin
 git remote add origin
 git push origin --all //修改仓库地址后，把所有分支一次性推送到远程
 ```
+
+* git reset 三种模式
+```
+git reset --hard //这个操作一般不要用
+git reset --mixed //这个默认 就是把commit回退到没有add的状态
+git reset --soft //这个是把commit回退到add之后，没有commit的状态
+git log
+git reflog //找回历史
