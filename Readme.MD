@@ -33,9 +33,29 @@ git push origin --all //修改仓库地址后，把所有分支一次性推送�
 ```
 
 * git reset 三种模式
-```
+```shell
 git reset --hard //这个操作一般不要用
 git reset --mixed //这个默认 就是把commit回退到没有add的状态
 git reset --soft //这个是把commit回退到add之后，没有commit的状态
 git log
 git reflog //找回历史
+```
+* git rm 删除文件
+```shell
+git rm fileName //删除文件，这个类似删除，工作取，暂存区，仓库都没有了
+git rm --cached fileName // 这个会保留工作区，意思是你想把它加到.gitignore中
+```
+* git gerrit 联合使用（gerrit个人认为已经是上古时代的东西）
+```shell
+git  push origin HEAD:refs/for/dev
+//git remote -v
+//origin  git@github.com:zhonglinzha/git.git (fetch)
+//origin  git@github.com:zhonglinzha/git.git (push)
+// 这里解释一波：git push 中的origin 和 remote中的 origin 是对应的
+// 也可以是别的 origin 一般是默认的
+
+//gerrit git pull 容易丢失 Change-Id
+//这里使用这个命令
+git commit --amend
+
+```
